@@ -1,0 +1,28 @@
+<p>
+  <strong>instrumento:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Cualidades:</strong>
+  <%= @course.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
+
+
+<%= form_with(model: @order, url: course_orders_path(@course), local: true) do |form| %>
+
+
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Inscribite" %>
+  </div>
+<% end %>
