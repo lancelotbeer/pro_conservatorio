@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  authorize_resource
 
   def index
     @user_courses = current_user.courses
