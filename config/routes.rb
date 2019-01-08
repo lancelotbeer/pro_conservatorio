@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'pages/home'
   get 'orders/index'
   get 'orders/create'
   devise_for :users, controllers: {

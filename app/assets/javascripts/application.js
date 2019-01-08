@@ -13,4 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require core.min
+//= require html5shiv.min
+//= require pointer-events.min
+//= require script
 //= require_tree .

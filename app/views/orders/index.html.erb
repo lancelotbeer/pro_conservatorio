@@ -19,6 +19,7 @@
           <td><%= order.course.name %></td>
           <td><%= order.course.description %></td>
           <td><%= link_to 'Destroy', course_order_path(order.course, order), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Pagar', course_order_path(order.course, order) %></td>
         </tr>
       <% end %>
   </tbody>

@@ -21,6 +21,15 @@
     <%= form.text_area :description  %>
   </div>
 
+  <div class="field">
+    <%= form.label :type%>
+    <select id="tipo" name="tipo">
+      <option value="carrera">carrera</option>
+      <option value="curso">curso</option>
+    </select>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

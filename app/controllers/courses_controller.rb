@@ -10,7 +10,9 @@ authorize_resource
     @order = Order.new
   end
   def create
-    @course = Course.create(course_params)
+    @course = Course.new(course_params)
+    @course.tipo = params[:tipo]
+    @course.save
     redirect_to courses_url, notice: 'has creado un nuevo curso.'
   end
   def new
@@ -31,6 +33,6 @@ authorize_resource
       @course = Course.find(params[:id])
     end
     def course_params
-      params.require(:course).permit(:name)
+      params.require(:course).permit(:name, :description, :type)
     end
 end
