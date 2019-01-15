@@ -1,139 +1,12 @@
-<!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-  <head>
-    <title>Home</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,700,800%7CWork+Sans:300,400,500,600,700%7CPlayfair+Display:400,400i,700">
-    <!--[if lt IE 10]>
-    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+
     <div class="page">
       <!-- Page Header-->
-      <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-aside-outer">
-              <div class="rd-navbar-aside">
-                <!-- RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!-- RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src=" <%= image_path 'logo-default-131x43.png' %>" alt="" width="131" height="43" srcset="logo-default-282x86.png 2x"/></a>
-                </div>
-                <div class="rd-navbar-collapse">
-                  <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
-                  <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                    <article class="unit align-items-center">
-                      <div class="unit-left"><span class="icon icon-md icon-modern mdi mdi-phone"></span></div>
-                      <div class="unit-body">
-                        <ul class="list-0">
-                          <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
-                          <li><a class="link-default" href="tel:#">1-800-8763-765</a></li>
-                        </ul>
-                      </div>
-                    </article>
-                    <article class="unit align-items-center">
-                      <div class="unit-left"><span class="icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                      <div class="unit-body"><a class="link-default" href="tel:#">2130 Fulton Street <br> San Diego, CA 94117-1080</a></div>
-                    </article><a class="button button-primary-outline button-winona" href="#">Book a Lesson</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
-                  <!-- RD Navbar Search-->
-                  <div class="rd-navbar-search" id="rd-navbar-search-1">
-                    <button class="rd-navbar-search-toggle" data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>
-                    <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live-1" method="GET">
-                      <div class="form-wrap">
-                        <label class="form-label" for="rd-navbar-search-form-input-1">Search...</label>
-                        <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input-1" type="text" name="s" autocomplete="off">
-                        <div class="rd-search-results-live" id="rd-search-results-live-1"></div>
-                      </div>
-                      <button class="rd-search-form-submit fa-search" type="submit"></button>
-                    </form>
-                  </div>
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="classes.html">Classes</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Blog</a>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-menu rd-navbar-dropdown">
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-blog.html">Grid Blog</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="sidebar-blog.html">Sidebar Blog</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-layouts.html">Blog Layouts</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-blog-post.html">Single Blog Post</a></li>
-                      </ul>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="teachers.html">Teachers</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                      <!-- RD Navbar Megamenu-->
-                      <ul class="rd-menu rd-navbar-megamenu">
-                        <li class="rd-megamenu-item">
-                          <div class="banner" style="background-image: url(images/megamenu-banner-1-570x368.jpg);"><a class='button button-sm button-primary button-winona' href='#'>Buy Theme</a>
-                          </div>
-                        </li>
-                        <li class="rd-megamenu-item">
-                          <ul class="rd-megamenu-list">
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">404 Page</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503-page.html">503 Page</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="under-construction.html">Under Construction</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="single-job.html">Single Job</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-gallery.html">Grid Gallery</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="masonry-gallery.html">Masonry Gallery</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="modern-gallery.html">Modern Gallery</a></li>
-                          </ul>
-                        </li>
-                        <li class="rd-megamenu-item">
-                          <ul class="rd-megamenu-list">
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs.html">Tabs</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="testimonials.html">Testimonials</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy policy</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="large-features.html">Large Features</a></li>
-                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
+
 
       <!-- Slider Light-->
       <section class="swiper-container swiper-slider swiper-slider-light context-dark" data-loop="true" data-autoplay="true" data-simulate-touch="false" data-custom-slide-effect="inter-leave-effect" data-inter-leave-offset="-.5">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" data-slide-bg="images/slider-light-slide-1-1920x776.jpg">
+          <div class="swiper-slide" data-slide-bg="<%= image_url 'slider-light-slide-1-1920x776.jpg' %>">
             <div class="slide-inner">
               <div class="container">
                 <div class="swiper-slide-caption">
@@ -143,7 +16,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" data-slide-bg="images/slider-light-slide-2-1920x776.jpg">
+          <div class="swiper-slide" data-slide-bg="<%= image_url 'slider-light-slide-2-1920x776.jpg' %>">
             <div class="slide-inner">
               <div class="container">
                 <div class="swiper-slide-caption">
@@ -153,7 +26,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" data-slide-bg="images/slider-light-slide-3-1920x776.jpg">
+          <div class="swiper-slide" data-slide-bg="<%= image_url 'slider-light-slide-3-1920x776.jpg' %>">
             <div class="slide-inner">
               <div class="container">
                 <div class="swiper-slide-caption">
@@ -188,7 +61,7 @@
       <!-- Music Classes-->
       <section class="section section-lg bg-gray-100 text-center">
         <div class="container">
-          <h3>Music Classes</h3>
+          <h3>Clases de Musica</h3>
           <div class="row row-60">
             <div class="col-sm-6 col-lg-4 wow-outer">
               <!-- Box Creative-->
@@ -277,7 +150,7 @@
       </section>
 
       <!-- CTA Parallax-->
-      <section class="section parallax-container section-1 bg-primary-darker text-center" data-parallax-img="images/parallax-cta.jpg">
+      <section class="section parallax-container section-1 bg-primary-darker text-center" data-parallax-img="<%= image_path 'parallax-cta.jpg' %>">
         <div class="parallax-content">
           <div class="container">
             <div class="row justify-content-center">
@@ -351,7 +224,7 @@
             </blockquote>
             <blockquote class="quote-classic">
               <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="<%= image_path 'testimonials-person-1-96x96.jpg'%>" alt="" width="96" height="96"/>
+                <div class="quote-classic-avatar"><img src="<%= image_path 'testimonials-person-1-96x96.jpg' %>" alt="" width="96" height="96"/>
                 </div>
                 <div class="quote-classic-info">
                   <cite class="quote-classic-cite">Kelly McMillan</cite>
@@ -419,7 +292,7 @@
       </section>
 
       <!-- Counters Parallax-->
-      <section class="section parallax-container section-lg text-center context-dark" data-parallax-img="images/parallax-counter.jpg">
+      <section class="section parallax-container section-lg text-center context-dark" data-parallax-img="<%= image_url 'parallax-counter.jpg' %>">
         <div class="parallax-content">
           <div class="container">
             <h3>Some Facts About Our School</h3>
@@ -774,6 +647,3 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
-
-  </body>
-</html>

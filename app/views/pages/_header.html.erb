@@ -1,0 +1,96 @@
+<header class="section page-header">
+  <!-- RD Navbar-->
+  <div class="rd-navbar-wrap">
+    <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+      <div class="rd-navbar-aside-outer">
+        <div class="rd-navbar-aside">
+          <!-- RD Navbar Panel-->
+          <div class="rd-navbar-panel">
+            <!-- RD Navbar Toggle-->
+            <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+            <!-- RD Navbar Brand-->
+            <a class="rd-navbar-brand" href="index.html">
+              <img src=" <%= image_path 'iconconser.jpg' %>" alt=""/>
+            </a>
+          </div>
+          <div class="rd-navbar-collapse">
+            <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
+            <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
+              <article class="unit align-items-center">
+                <div class="unit-left"><span class="icon icon-md icon-modern mdi mdi-phone"></span></div>
+                <div class="unit-body">
+                  <ul class="list-0">
+                    <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
+                    <li><a class="link-default" href="tel:#">1-800-8763-765</a></li>
+                  </ul>
+                </div>
+              </article>
+              <article class="unit align-items-center">
+                <div class="unit-left"><span class="icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                <div class="unit-body"><a class="link-default" href="tel:#">2130 Fulton Street <br> San Diego, CA 94117-1080</a></div>
+              </article><a class="button button-primary-outline button-winona" href="#">Book a Lesson</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rd-navbar-main-outer">
+        <div class="rd-navbar-main">
+          <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
+            <!-- RD Navbar Search-->
+
+            <!-- RD Navbar Nav-->
+            <ul class="rd-navbar-nav">
+              <li class="rd-nav-item active"><a class="rd-nav-link" href="<%= root_path %>">Inicio</a>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">Conservatorio</a>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="<%= courses_path %>">Cursos</a>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="<%= posts_path %>">Blog</a>
+                <!-- RD Navbar Dropdown-->
+                <ul class="rd-menu rd-navbar-dropdown">
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-blog.html">Grid Blog</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="sidebar-blog.html">Sidebar Blog</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-layouts.html">Blog Layouts</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-blog-post.html">Single Blog Post</a></li>
+                </ul>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="teachers.html">Profesores</a>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Interes</a>
+                <!-- RD Navbar Megamenu-->
+                <ul class="rd-menu rd-navbar-megamenu">
+                  <li class="rd-megamenu-item">
+                    <div class="banner" style="background-image: url(<%= image_path 'piano1.jpg' %>);"><a class='button button-sm button-primary button-winona' href='#'>Ir al blog</a>
+                    </div>
+                  </li>
+                  <li class="rd-megamenu-item">
+                    <ul class="rd-megamenu-list">
+                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">404 Page</a></li>
+                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="modern-gallery.html">Modern Gallery</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacto</a>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" >Registro</a>
+                <!-- RD Navbar Dropdown-->
+                <ul class="rd-menu rd-navbar-dropdown">
+                  <% if user_signed_in? %>
+                    <%= current_user.email if user_signed_in? %>
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<%= destroy_user_session_path %>" data-method="DELETE">Salir</a></li>
+                  <% else %>
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<%= new_user_session_path %>">Ingresa</a></li>
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<%= new_user_registration_path %>">Registrate</a></li>
+                  <% end %>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

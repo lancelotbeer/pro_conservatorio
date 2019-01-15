@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'pages/home'
+  root 'pages#home'
+
   get 'orders/index'
   get 'orders/create'
+
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -15,6 +17,5 @@ Rails.application.routes.draw do
   resources :courses do
     resources :orders, only: [:create, :destroy]
   end
-  root to:"posts#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
