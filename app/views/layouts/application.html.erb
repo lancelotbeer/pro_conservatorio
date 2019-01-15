@@ -19,14 +19,11 @@
   </head>
 
   <body>
-    <%= render 'pages/header' %>
-    <p class="notice"><%= notice %></p>
+    <%= render 'shared/navbar' %>
+
     <%= yield %>
 
-    <% if alert.present? %>
-      <div class="alert"><%= alert %></div>
-    <% end %>
-
+<%= render 'shared/footer' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

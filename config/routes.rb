@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'pages#home'
-
+  get 'pages/classes'
   get 'orders/index'
   get 'orders/create'
 
