@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -12,8 +13,33 @@
     <![endif]-->
   </head>
   <body>
+
     <div class="page">
-      <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(images/breadcrumbs-image-1.jpg);">
+      <table>
+        <thead>
+          <tr>
+            <th>cursos disponibles</th>
+            <th>descripcion</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @courses.each do |course| %>
+          <tr>
+            <td><%= course.name %></td>
+            <td><%= course.description %></td>
+            <td><%= link_to 'Show', course %></td>
+            <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+      <%= link_to 'New Course', new_course_path %>
+
+      <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(<%= image_url 'breadcrumbs-image-1.jpg' %>);">
         <div class="breadcrumbs-custom-inner">
           <div class="container breadcrumbs-custom-container">
             <div class="breadcrumbs-custom-main">
@@ -27,6 +53,64 @@
           </div>
         </div>
       </section>
+
+      <!-- Stroke Icons 3 Column Layout-->
+      <section class="section section-lg bg-gray-100 text-center">
+        <div class="container">
+          <h3>Clases de música destacadas</h3>
+          <div class="row row-60">
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Creative-->
+              <article class="box-creative wow slideInDown" data-wow-delay=".1s">
+                <div class="novi-icon box-creative-icon linearicons-playlist"></div>
+                <h4 class="box-creative-title"><a href="classes.html">Piano</a></h4>
+                <p>Want to learn to play piano? Our Piano Lessons are open to everyone. </p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Creative-->
+              <article class="box-creative wow slideInDown" data-wow-delay=".2s">
+                <div class="novi-icon box-creative-icon linearicons-guitar"></div>
+                <h4 class="box-creative-title"><a href="classes.html">Guitarra</a></h4>
+                <p>Learn to play the world’s popular instrument with our guitar classes.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Creative-->
+              <article class="box-creative wow slideInDown" data-wow-delay=".3s">
+                <div class="novi-icon box-creative-icon linearicons-acordeon"></div>
+                <h4 class="box-creative-title"><a href="classes.html">Acordeon</a></h4>
+                <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Creative-->
+              <article class="box-creative wow slideInDown" data-wow-delay=".3s">
+                <div class="novi-icon box-creative-icon linearicons-mic"></div>
+                <h4 class="box-creative-title"><a href="classes.html">Canto</a></h4>
+                <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Creative-->
+              <article class="box-creative wow slideInDown" data-wow-delay=".3s">
+                <div class="novi-icon box-creative-icon linearicons-mic"></div>
+                <h4 class="box-creative-title"><a href="classes.html">Violin</a></h4>
+                <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Creative-->
+              <article class="box-creative wow slideInDown" data-wow-delay=".3s">
+                <div class="novi-icon box-creative-icon linearicons-mic"></div>
+                <h4 class="box-creative-title"><a href="classes.html">Danza</a></h4>
+                <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Counters-->
       <section class="section section-lg text-center">
         <div class="container">
@@ -121,74 +205,14 @@
           <h3>Popular Music Classes</h3>
           <p><span class="text-width-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>
           <div class="row row-50 row-xxl-70 offset-top-2">
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <!-- Box Light-->
-              <article class="box-light">
-                <div class="box-light-icon linearicons-playlist"></div>
-                <h4 class="box-light-title">Piano</h4>
-                <p>Want to learn to play piano? Our Piano Lessons are open to everyone.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <!-- Box Light-->
-              <article class="box-light">
-                <div class="box-light-icon linearicons-guitar"></div>
-                <h4 class="box-light-title">Guitar</h4>
-                <p>Learn to play the world’s popular instrument with our guitar classes.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <!-- Box Light-->
-              <article class="box-light">
-                <div class="box-light-icon linearicons-mic"></div>
-                <h4 class="box-light-title">Vocal</h4>
-                <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <!-- Box Light-->
-              <article class="box-light">
-                <div class="box-light-icon linearicons-trumpet"></div>
-                <h4 class="box-light-title">Trumpet</h4>
-                <p>We offer extensive trumpet learning program at our music school.</p>
-              </article>
-            </div>
+            <% @courses.each do |course| %>
+            <% @course = course %>
+              <%= render 'shared/course' %>
+            <% end %>
           </div>
         </div>
       </section>
 
-      <!-- Stroke Icons 3 Column Layout-->
-      <section class="section section-lg bg-gray-100 text-center">
-        <div class="container">
-          <h3>Featured Music Classes</h3>
-          <div class="row row-60">
-            <div class="col-sm-6 col-lg-4 wow-outer">
-              <!-- Box Creative-->
-              <article class="box-creative wow slideInDown" data-wow-delay=".1s">
-                <div class="novi-icon box-creative-icon linearicons-playlist"></div>
-                <h4 class="box-creative-title"><a href="classes.html">Piano</a></h4>
-                <p>Want to learn to play piano? Our Piano Lessons are open to everyone. </p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 wow-outer">
-              <!-- Box Creative-->
-              <article class="box-creative wow slideInDown" data-wow-delay=".2s">
-                <div class="novi-icon box-creative-icon linearicons-guitar"></div>
-                <h4 class="box-creative-title"><a href="classes.html">Guitar</a></h4>
-                <p>Learn to play the world’s popular instrument with our guitar classes.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 wow-outer">
-              <!-- Box Creative-->
-              <article class="box-creative wow slideInDown" data-wow-delay=".3s">
-                <div class="novi-icon box-creative-icon linearicons-mic"></div>
-                <h4 class="box-creative-title"><a href="classes.html">Vocal</a></h4>
-                <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Contact Info-->
       <section class="section section-sm">
@@ -216,89 +240,5 @@
           </div>
         </div>
       </section>
-  </body>
-</html>
-
-index de course
-<br>
-listado de cursos
-<br>
-
-<section class="section section-lg bg-gray-100 text-center">
-  <div class="container">
-    <h3>Music Classes</h3>
-    <div class="row row-60">
-      <div class="col-sm-6 col-lg-4 wow-outer">
-        <!-- Box Creative-->
-        <article class="box-creative wow slideInDown" data-wow-delay=".1s">
-          <div class="novi-icon box-creative-icon linearicons-playlist"></div>
-          <h4 class="box-creative-title"><a href="classes.html">Piano</a></h4>
-          <p>Want to learn to play piano? Our Piano Lessons are open to everyone. </p>
-        </article>
-      </div>
-      <div class="col-sm-6 col-lg-4 wow-outer">
-        <!-- Box Creative-->
-        <article class="box-creative wow slideInDown" data-wow-delay=".2s">
-          <div class="novi-icon box-creative-icon linearicons-guitar"></div>
-          <h4 class="box-creative-title"><a href="classes.html">Acordeon</a></h4>
-          <p>Learn to play the world’s popular instrument with our guitar classes.</p>
-        </article>
-      </div>
-      <div class="col-sm-6 col-lg-4 wow-outer">
-        <!-- Box Creative-->
-        <article class="box-creative wow slideInDown" data-wow-delay=".3s">
-          <div class="novi-icon box-creative-icon linearicons-mic"></div>
-          <h4 class="box-creative-title"><a href="classes.html">Violin</a></h4>
-          <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
-        </article>
-      </div>
-      <div class="col-sm-6 col-lg-4 wow-outer">
-        <!-- Box Creative-->
-        <article class="box-creative wow slideInDown" data-wow-delay=".6s">
-          <div class="novi-icon box-creative-icon linearicons-trumpet"></div>
-          <h4 class="box-creative-title"><a href="classes.html">Trumpet</a></h4>
-          <p>We offer extensive trumpet learning program at our music school.</p>
-        </article>
-      </div>
-      <div class="col-sm-6 col-lg-4 wow-outer">
-        <!-- Box Creative-->
-        <article class="box-creative wow slideInDown" data-wow-delay=".5s">
-          <div class="novi-icon box-creative-icon linearicons-equalizer"></div>
-          <h4 class="box-creative-title"><a href="classes.html">DJ</a></h4>
-          <p>DJ music class provides in-depth knowledge and training for aspiring DJs.</p>
-        </article>
-      </div>
-      <div class="col-sm-6 col-lg-4 wow-outer">
-        <!-- Box Creative-->
-        <article class="box-creative wow slideInDown" data-wow-delay=".4s">
-          <div class="novi-icon box-creative-icon linearicons-hearing"></div>
-          <h4 class="box-creative-title"><a href="classes.html">Hearing</a></h4>
-          <p>Hearing curriculum at our School develops students’ aural skills.</p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-<table>
-  <thead>
-    <tr>
-      <th>cursos disponibles</th>
-      <th>descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.name %></td>
-        <td><%= course.description %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<%= link_to 'New Course', new_course_path %>
+  <!-- </body>
+</html> -->

@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+//= stub turbolinks
 //= require core.min
 //= require html5shiv.min
 //= require pointer-events.min

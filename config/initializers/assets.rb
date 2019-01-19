@@ -25,6 +25,8 @@ Rails.application.config.assets.precompile += %w( *.jpg
                                                   *.woff2
                                                   *.otf
                                                   *.ttf
+                                                  *.mp4
                                                 )
+Rails.application.config.assets.precompile += %w( *.css *.js)
 
-Rails.application.config.assets.precompile += %w( bootstrap.css fonts.css style.css )
+#Rails.application.config.assets.precompile += %w( bootstrap.css fonts.css style.css )

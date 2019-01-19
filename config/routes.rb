@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
-  get 'pages/classes'
-  get 'orders/index'
-  get 'orders/create'
-
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -17,5 +12,12 @@ Rails.application.routes.draw do
   resources :courses do
     resources :orders, only: [:create, :destroy]
   end
+
+  get 'pages/classes'
+  get 'pages/conservatorio'
+  get 'pages/profesores'
+  get 'pages/contact'
+  get 'pages/blog'
+  root 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
