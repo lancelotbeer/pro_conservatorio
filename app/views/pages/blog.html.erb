@@ -114,30 +114,6 @@
               <!-- RD Mailform-->
               <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
                 <div class="row row-10">
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <label class="form-label-outside" for="comment-first-name">First Name</label>
-                      <input class="form-input" id="comment-first-name" type="text" name="name" data-constraints="@Required">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <label class="form-label-outside" for="comment-last-name">Last Name</label>
-                      <input class="form-input" id="comment-last-name" type="text" name="name" data-constraints="@Required">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <label class="form-label-outside" for="comment-email">E-mail</label>
-                      <input class="form-input" id="comment-email" type="email" name="email" data-constraints="@Email @Required">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <label class="form-label-outside" for="comment-phone">Phone</label>
-                      <input class="form-input" id="comment-phone" type="text" name="phone" data-constraints="@PhoneNumber">
-                    </div>
-                  </div>
                   <div class="col-12">
                     <div class="form-wrap">
                       <label class="form-label-outside" for="comment-message">Your Message</label>
@@ -152,7 +128,8 @@
           <div class="col-lg-4">
             <!-- Profile Thin-->
             <article class="profile-thin">
-              <div class="profile-thin-aside"><img class="profile-thin-image" src="<%= image_path 'profile-thin-1-168x168.jpg' %>" alt="" width="168" height="168"/><a class="profile-thin-contact-button" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span class="icon mdi mdi-email-outline"></span></a>
+              <div class="profile-thin-aside"><img class="profile-thin-image" src="<%=  %>" alt="" width="168" height="168"/><a class="profile-thin-contact-button" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span class="icon mdi mdi-email-outline"></span></a>
+                <%= render 'form', post: @post %>
               </div>
               <div class="profile-thin-main">
                 <p class="profile-thin-title">Theresa Barnes</p>

@@ -1,28 +1,109 @@
-<h1>Posts</h1>
 
 <table>
   <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
   </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.user.try(:name) %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Post', new_post_path %>
+<div class="page animated" style="animation-duration: 500ms;">
+  <!-- Breadcrumbs -->
+  <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(<%=image_url 'breadcrumbs-image-1.jpg' %>);">
+    <div class="breadcrumbs-custom-inner">
+      <div class="container breadcrumbs-custom-container">
+        <div class="breadcrumbs-custom-main">
+          <h6 class="breadcrumbs-custom-subtitle title-decorated">Blog</h6>
+          <h2 class="breadcrumbs-custom-title">Nuestro Blog</h2>
+        </div>
+        <ul class="breadcrumbs-custom-path">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li class="active">Nuestro Blog</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section section-lg">
+    <div class="container">
+      <div class="row row-50 row-xxl-70">
+        <% @posts.each do |post| %>
+
+        <div class="col-md-6 scaleFadeInWrap">
+          <!-- Post Modern-->
+          <div class="wow scaleFadeIn">
+            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-1-571x353.jpg' %>" alt="" width="571" height="353"/></a>
+              <h4 class="post-modern-title"><a href="single-blog-post.html"><td><%= post.title %></td></a></h4>
+              <ul class="post-modern-meta">
+                <li><%= post.user.try(:name) %></li>
+                <li>
+                  <time datetime="2018"><%= post.created_at %></time>
+                </li>
+                <li><a class="button-winona" href="#"><%= link_to 'Entrar al Post', post %></a></li>
+              </ul>
+              <p><%= post.content %></p>
+              <tr>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            </article>
+          </div>
+        </div>
+          <% end %>
+        <div class="col-md-6 scaleFadeInWrap">
+          <!-- Post Modern-->
+          <div class="wow scaleFadeIn" data-wow-delay=".1s">
+            <article class="post-modern"> <a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-2-571x353.jpg' %>" alt="" width="571" height="353"/></a>
+              <h4 class="post-modern-title"><a href="single-blog-post.html">Melody Music School Live DJ Set</a></h4>
+              <ul class="post-modern-meta">
+                <li>by Theresa Barnes</li>
+                <li>
+                  <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
+                </li>
+                <li><a class="button-winona" href="#">News</a></li>
+              </ul>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
+            </article>
+          </div>
+        </div>
+        <div class="col-md-6 scaleFadeInWrap">
+          <!-- Post Modern-->
+          <div class="wow scaleFadeIn">
+            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-3-571x353.jpg' %>" alt="" width="571" height="353"/></a>
+              <h4 class="post-modern-title"><a href="single-blog-post.html">Top 10 Microphones for Your Home Studio</a></h4>
+              <ul class="post-modern-meta">
+                <li>by Theresa Barnes</li>
+                <li>
+                  <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
+                </li>
+                <li><a class="button-winona" href="#">News</a></li>
+              </ul>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
+            </article>
+          </div>
+        </div>
+        <div class="col-md-6 scaleFadeInWrap">
+          <!-- Post Modern-->
+          <div class="wow scaleFadeIn" data-wow-delay=".1s">
+            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-4-571x353.jpg' %>" alt="" width="571" height="353"/></a>
+              <h4 class="post-modern-title"><a href="single-blog-post.html">Where to Buy Quality Folk Drums and Percussion</a></h4>
+              <ul class="post-modern-meta">
+                <li>by Theresa Barnes</li>
+                <li>
+                  <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
+                </li>
+                <li><a class="button-winona" href="#">News</a></li>
+              </ul>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <%= link_to 'New Post', new_post_path %>
+      <div class="pagination">
+        <div class="page-item active"><a class="page-link button-winona" href="#">1</a></div>
+        <div class="page-item"><a class="page-link button-winona" href="#">2</a></div>
+        <div class="page-item"><a class="page-link button-winona" href="#">3</a></div>
+        <div class="page-item"><a class="page-link button-winona" href="#">4</a></div>
+      </div>
+    </div>
+  </section>
+  </div>

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   authorize_resource
   def index
       @posts = Post.all
+      @post = Post.new
     end
 
     # GET /posts/1
