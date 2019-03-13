@@ -1953,7 +1953,7 @@
 						break;
 					}
 				}
-				$.getScript('//maps.google.com/maps/api/js?' + (key ? 'key=' + key + '&' : '') + 'sensor=false&libraries=geometry,places&v=quarterly', function () {
+				$.getScript('//maps.google.com/maps/api/js?' + (key ? 'key=' + 'AIzaSyDt6CTl-w719ozxTHZ0jd4ociyZ0ZNL-fE' + '&' : '') + 'sensor=false&libraries=geometry,places&v=quarterly', function () {
 					var head = document.getElementsByTagName('head')[0],
 							insertBefore = head.insertBefore;
 					head.insertBefore = function (newElement, referenceElement) {

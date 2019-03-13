@@ -1,7 +1,8 @@
 <div class="col-sm-6 col-lg-4 wow-outer">
   <!-- Box Minimal-->
   <article class="box-minimal">
-    <div class="box-minimal-icon linearicons-playlist wow fadeIn"></div>
+    <p class="wow fadeInUpSmall"><%= image_tag @course.image.url %></p>
+    <article class="box-minimal">
     <div class="box-minimal-main wow-outer">
       <h4 class="box-minimal-title wow slideInDown"><%= link_to @course.name, @course %><%=  %></h4>
       <p class="wow fadeInUpSmall"><%= @course.description %></p>

@@ -4,11 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
 gem 'rails', '~> 5.2.1'
+gem 'carrierwave'
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem  'cancancan'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

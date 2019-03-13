@@ -15,7 +15,7 @@ module ProConservatorio
 
 
     config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets")
-    config.assets.precompile += %w( bootstrap.css fonts.css style.css )
+    config.assets.precompile += %w( *.css *.js )
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

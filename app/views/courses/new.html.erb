@@ -1,44 +1,6 @@
 
 <div class="page animated" style="animation-duration: 500ms;">
 
-
-<%= form_with(model: @course, local: true) do |form| %>
-  <% if @course.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% @course.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description  %>
-  </div>
-
-  <div class="field">
-    <%= form.label :type%>
-    <select id="tipo" name="tipo">
-      <option value="carrera">carrera</option>
-      <option value="curso">curso</option>
-    </select>
-  </div>
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
       <!-- Breadcrumbs -->
       <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(<%= image_url 'breadcrumbs-image-1.jpg'%>);">
         <div class="breadcrumbs-custom-inner">
@@ -63,47 +25,47 @@
                 <div class="section-lg">
                   <h3 class="wow-outer"><span class="wow slideInDown">Ingrese Datos del nuevo curso</span></h3>
                   <!-- RD Mailform-->
-                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                    <div class="row row-10">
-                      <div class="col-md-6 wow-outer">
-                        <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-first-name">Nombre Del Curso</label>
-                          <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required">
-                        </div>
-                      </div>
-                      <div class="col-md-6 wow-outer">
-                        <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-last-name">Last Name</label>
-                          <input class="form-input" id="contact-last-name" type="text" name="name" data-constraints="@Required">
-                        </div>
-                      </div>
-                      <div class="col-md-6 wow-outer">
-                        <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-email">E-mail</label>
-                          <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
-                        </div>
-                      </div>
-                      <div class="col-md-6 wow-outer">
-                        <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-phone">Phone</label>
-                          <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@PhoneNumber">
-                        </div>
-                      </div>
-                      <div class="col-12 wow-outer">
-                        <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-message">Descripcion del Curso</label>
-                          <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                        </div>
-                      </div>
+                  <!-- Nuevo Form -->
+                  <%= form_with(model: @course, local: true, class: 'rd-form rd-mailform') do |form| %>
+                  <% if @course.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+                      <ul>
+                      <% @course.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                      <% end %>
+                      </ul>
                     </div>
-                    <div class="group group-middle">
-                      <div class="wow-outer">
-                        <button class="button button-primary button-winona wow slideInRight" type="submit">Send Message</button>
-                      </div>
-                      <p>or use</p>
-                      <div class="wow-outer"><a class="button button-primary-outline button-icon button-icon-left button-winona wow slideInLeft" href="#"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</a></div>
-                    </div>
-                  </form>
+                  <% end %>
+                        <div class="row row-10">
+                          <div class="col-md-6 wow-outer">
+                            <div class="form-wrap wow fadeSlideInUp">
+                              <%= form.label :image, id: :course_image, class:'form-label-outside' %>
+                              <%= form.file_field :image, class: 'form-input' %>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 wow-outer">
+                            <div class="form-wrap wow fadeSlideInUp">
+                              <%= form.label :name, id: :course_name, class:'form-label-outside' %>
+                              <%= form.text_field :name, class: 'form-input' %>
+                            </div>
+                          </div>
+
+                          <div class="col-12 wow-outer">
+                            <div class="form-wrap wow fadeSlideInUp">
+                                <%= form.label :description, class: 'form-label-outside' %>
+                                <%= form.text_area :description, class:'form-input'  %>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group group-middle">
+                          <div class="wow-outer">
+                            <%= form.submit 'Crear Curso', class: 'button button-primary button-winona wow slideInRight' %>
+                          </div>
+                        </div>
+                    <% end %>
                 </div>
               </div>
             </div>

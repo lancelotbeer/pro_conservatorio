@@ -1,46 +1,53 @@
 <div class="page animated" style="animation-duration: 500ms;">
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :phono %><br />
-    <%= f.text_field :phono %>
-  </div>
-  <div class="field">
-    <%= f.label :rut %><br />
-    <%= f.text_field :rut %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+<!-- Registration form-->
+<div class="section-sm section-last">
+  <div class="container">
+    <h6>Registration form</h6>
+  </div>
+  <section class="section section-md bg-gray-700">
+    <div class="container">
+      <div class="box-1">
+        <h4>Registration</h4>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{class:"rd-form rd-form-small"}) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="form-wrap">
+            <%= f.text_field :name, class: 'form-input' %>
+            <%= f.label :name, class: 'form-label' %>
+          </div>
+
+          <div class="form-wrap">
+            <%= f.text_field :last_name, class: 'form-input' %>
+            <%= f.label :last_name, class: 'form-label' %>
+          </div>
+
+          <div class="form-wrap">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-input' %>
+              <%= f.label :email, class: 'form-label' %>
+          </div>
+          <div class="form-wrap">
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %>
+              <%= f.password_field :password, autocomplete: "new-password", class: 'form-input' %>
+          </div>
+
+          <div class="form-wrap">
+              <%= f.label :password_confirmation, class: 'form-input', class: 'form-input' %>
+          </div>
+          <div class="form-wrap">
+
+              <%= f.submit "Crear Cuenta", class:"button button-block button-primary button-winona" %>
+
+          </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </section>
+</div>
 </div>

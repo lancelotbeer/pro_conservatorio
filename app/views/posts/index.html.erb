@@ -30,7 +30,8 @@
         <div class="col-md-6 scaleFadeInWrap">
           <!-- Post Modern-->
           <div class="wow scaleFadeIn">
-            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-1-571x353.jpg' %>" alt="" width="571" height="353"/></a>
+            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= post.image.url %>" alt="" width="571" height="353"/></a>
+
               <h4 class="post-modern-title"><a href="single-blog-post.html"><td><%= post.title %></td></a></h4>
               <ul class="post-modern-meta">
                 <li><%= post.user.try(:name) %></li>
@@ -48,62 +49,10 @@
           </div>
         </div>
           <% end %>
-        <div class="col-md-6 scaleFadeInWrap">
-          <!-- Post Modern-->
-          <div class="wow scaleFadeIn" data-wow-delay=".1s">
-            <article class="post-modern"> <a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-2-571x353.jpg' %>" alt="" width="571" height="353"/></a>
-              <h4 class="post-modern-title"><a href="single-blog-post.html">Melody Music School Live DJ Set</a></h4>
-              <ul class="post-modern-meta">
-                <li>by Theresa Barnes</li>
-                <li>
-                  <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
-                </li>
-                <li><a class="button-winona" href="#">News</a></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-6 scaleFadeInWrap">
-          <!-- Post Modern-->
-          <div class="wow scaleFadeIn">
-            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-3-571x353.jpg' %>" alt="" width="571" height="353"/></a>
-              <h4 class="post-modern-title"><a href="single-blog-post.html">Top 10 Microphones for Your Home Studio</a></h4>
-              <ul class="post-modern-meta">
-                <li>by Theresa Barnes</li>
-                <li>
-                  <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
-                </li>
-                <li><a class="button-winona" href="#">News</a></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-6 scaleFadeInWrap">
-          <!-- Post Modern-->
-          <div class="wow scaleFadeIn" data-wow-delay=".1s">
-            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= image_path 'grid-blog-4-571x353.jpg' %>" alt="" width="571" height="353"/></a>
-              <h4 class="post-modern-title"><a href="single-blog-post.html">Where to Buy Quality Folk Drums and Percussion</a></h4>
-              <ul class="post-modern-meta">
-                <li>by Theresa Barnes</li>
-                <li>
-                  <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
-                </li>
-                <li><a class="button-winona" href="#">News</a></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
-            </article>
-          </div>
-        </div>
-      </div>
+
       <%= link_to 'New Post', new_post_path %>
-      <div class="pagination">
-        <div class="page-item active"><a class="page-link button-winona" href="#">1</a></div>
-        <div class="page-item"><a class="page-link button-winona" href="#">2</a></div>
-        <div class="page-item"><a class="page-link button-winona" href="#">3</a></div>
-        <div class="page-item"><a class="page-link button-winona" href="#">4</a></div>
-      </div>
+
+
     </div>
   </section>
   </div>

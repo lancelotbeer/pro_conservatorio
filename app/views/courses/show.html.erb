@@ -1,28 +1,75 @@
-<p>
-  <strong>instrumento:</strong>
-  <%= @course.name %>
-</p>
+<div class="page animated" style="animation-duration: 500ms;">
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(images/breadcrumbs-image-1.jpg);">
+        <div class="breadcrumbs-custom-inner">
+          <div class="container breadcrumbs-custom-container">
+            <div class="breadcrumbs-custom-main">
+              <h6 class="breadcrumbs-custom-subtitle title-decorated">Seleccionar</h6>
+              <h2 class="breadcrumbs-custom-title">Curso</h2>
+            </div>
+            <ul class="breadcrumbs-custom-path">
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Curso</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section section-sm">
+        <div class="container">
+          <div class="layout-bordered">
+            <div class="layout-bordered-item wow-outer">
+              <div class="layout-bordered-item-inner wow slideInUp">
+                <div class="icon icon-lg mdi mdi-phone text-primary">Llamanos</div>
+                <ul class="list-0">
+                  <li><a class="link-default" href="tel:#">221234567</a></li>
+                  <li><a class="link-default" href="tel:#">+56 989756431</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="layout-bordered-item wow-outer">
+              <div class="layout-bordered-item-inner wow slideInUp">
+                <div class="icon icon-lg mdi mdi-map-marker text-primary"></div><a class="link-default" href="#">2130 Fulton Street San Diego, CA 94117-1080 USA</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<p>
-  <strong>Cualidades:</strong>
-  <%= @course.description %>
-</p>
+      <section class="section bg-gray-100">
+      <div class="row row-60">
+        <div class="col-sm-6 col-lg-4 wow-outer">
+          <!-- Box Creative-->
+          <article class="box-creative wow slideInDown" data-wow-delay=".1s">
+              <p><%= image_tag @course.image.url %></p>
+              <h4 class="box-creative-title"><a href="#"><%= @course.name %></a></h4>
+              <p><%= @course.description %></p>
+          </article>
+        </div>
+      </section>
+      <section class="section bg-gray-100">
+        <div class="range justify-content-xl-between">
+          <div class="cell-xl-6 align-self-center container">
+            <div class="row">
+              <div class="col-lg-9 cell-inner">
+                <div class="section-lg">
+                  <h3 class="wow-outer"><span class="wow slideInDown">Inscribete</span></h3>
+                  <%= form_with(model: @order, url: course_orders_path(@course), local: true) do |form| %>
+                    <div class="field">
+                      <label class="form-label-outside" for="comment-message">Your Message</label>
+                      <%= form.text_area :content, class: "form-input" %>
+                    </div>
+                    <br>
+                    <div class="actions ">
+                      <button class="button button-primary button-winona" type="submit">Matriculate</button>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
 
+        <%= render "shared/googlemaps" %>
+        </div>
+      </section>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
-
-
-<%= form_with(model: @order, url: course_orders_path(@course), local: true) do |form| %>
-
-
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Inscribite" %>
-  </div>
-<% end %>
+</div>

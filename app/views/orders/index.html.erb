@@ -1,28 +1,43 @@
-<h1>Orders#index</h1>
-<h1>Matriculas</h1>
+<div class="page animated" style="animation-duration: 500ms;">
+  <div class="page">
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(images/breadcrumbs-image-1.jpg);">
+        <div class="breadcrumbs-custom-inner">
+          <div class="container breadcrumbs-custom-container">
+            <div class="breadcrumbs-custom-main">
+              <h6 class="breadcrumbs-custom-subtitle title-decorated">Pagar</h6>
+              <h2 class="breadcrumbs-custom-title">Matricula</h2>
+            </div>
+            <ul class="breadcrumbs-custom-path">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Mi Curso</a></li>
+              <li class="active">Matricula</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- 3 Column Layout-->
+      <section class="section section-lg bg-gray-100">
+        <div class="container">
+          <h3 class="text-center">Curso Seleccionado</h3>
+          <div class="row row-30">
+            <% @user_orders.each do |order| %>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Pricing Minimal-->
+              <% if order.course.present? %>
+                <article class="pricing-minimal wow slideInRight">
+                  <h5 class="pricing-minimal-title"><a href=" "><%= order.course.name if order.course.present? %></a></h5>
+                  <p class="pricing-minimal-price"><span class="pricing-minimal-price-currency">$</span>30.000</p>
+                  <div class="pricing-minimal-divider"></div>
+                  <p><%= order.course.description if order.course.present? %></p>
+                  <td><%= link_to 'Borrar', course_order_path(order.course, order), method: :delete, data: { confirm: 'Are you sure?' }, class:"button button-primary button-winona"%></td>
+                  <td><%= link_to 'Pagar', course_order_path(order.course, order), class:"button button-primary button-winona" %></td>
+                </article>
+              <% end %>
 
-
-<h1>Cursos seleccionados</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>cursos seleccionados</th>
-      <th>descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <% @user_orders.each do |order| %>
-        <tr>
-          <td><%= order.course.name %></td>
-          <td><%= order.course.description %></td>
-          <td><%= link_to 'Destroy', course_order_path(order.course, order), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td><%= link_to 'Pagar', course_order_path(order.course, order) %></td>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
-
-<br>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </section>
+      </div>

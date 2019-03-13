@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-before_action :authenticate_user!
+
 before_action :set_course, only: [:show, :edit, :update, :destroy]
 authorize_resource
 
@@ -33,6 +33,6 @@ authorize_resource
       @course = Course.find(params[:id])
     end
     def course_params
-      params.require(:course).permit(:name, :description, :type)
+      params.require(:course).permit(:image, :name, :description)
     end
 end

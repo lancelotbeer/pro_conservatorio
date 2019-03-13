@@ -10,7 +10,7 @@
             <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
             <!-- RD Navbar Brand-->
             <a class="rd-navbar-brand" href="index.html">
-              <img src=" <%= image_path 'iconconser.jpg' %>" alt=""/>
+              <img src=" <%= image_path 'Logocda.jpg' %>" alt=""/>
             </a>
           </div>
           <div class="rd-navbar-collapse">
@@ -40,31 +40,19 @@
 
             <!-- RD Navbar Nav-->
             <ul class="rd-navbar-nav">
-              <li class="rd-nav-item "><a class="rd-nav-link" href="<%= root_path %>">Inicio</a>
+              <li class="rd-nav-item active"><a class="rd-nav-link" href="<%= root_path %>">Inicio</a>
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="<%= pages_conservatorio_path %>">Conservatorio</a>
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="<%= courses_path %>">Cursos</a>
               </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="<%= orders_path %>">Mi Curso</a>
+              </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="<%= posts_path %>">Blog</a>
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="<%= pages_profesores_path %>">Profesores</a>
               </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Interes</a>
-                <!-- RD Navbar Megamenu-->
-                <ul class="rd-menu rd-navbar-megamenu">
-                  <li class="rd-megamenu-item">
-                    <div class="banner" style="background-image: url(<%= image_path 'piano1.jpg' %>);"><a class='button button-sm button-primary button-winona' href='#'>Ir al blog</a>
-                    </div>
-                  </li>
-                  <li class="rd-megamenu-item">
-                    <ul class="rd-megamenu-list">
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="http://www.audiomusica.cl/">Audiomusica</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="http://www.casamarilla.cl/">Casa Amarilla</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+
               <li class="rd-nav-item"><a class="rd-nav-link" href="<%= pages_contact_path %>">Contacto</a>
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" >Registro</a>

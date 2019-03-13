@@ -1,37 +1,34 @@
 
     <div class="page">
-      <!-- Page Header-->
-
-
       <!-- Slider Light-->
       <section class="swiper-container swiper-slider swiper-slider-light context-dark" data-loop="true" data-autoplay="true" data-simulate-touch="false" data-custom-slide-effect="inter-leave-effect" data-inter-leave-offset="-.5">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" data-slide-bg="<%= image_url 'slider-light-slide-1-1920x776.jpg' %>">
+          <div class="swiper-slide" data-slide-bg="<%= image_url 'IMG_HOME_01.jpg' %>">
             <div class="slide-inner">
               <div class="container">
                 <div class="swiper-slide-caption">
                   <h2 class="wow-outer"><span class="wow-outer"><span class="wow" data-caption-animate="slideInDown">Conservatorio <span class="trs-italic">Nacional </span></br>De Acordeon </span></span></h2>
-                  <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="#" data-caption-animate="slideInDown" data-wow-delay=".2s">start learning</a></div>
+                  <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="<%= pages_conservatorio_path %>" data-caption-animate="slideInDown" data-wow-delay=".2s">Ir a Conservatorio</a></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide" data-slide-bg="<%= image_url 'slider-light-slide-2-1920x776.jpg' %>">
+          <div class="swiper-slide" data-slide-bg="<%= image_url 'IMG_HOME_02.jpg' %>">
             <div class="slide-inner">
               <div class="container">
                 <div class="swiper-slide-caption">
-                  <h1 class="wow-outer"><span class="wow-outer"><span class="wow" data-caption-animate="slideInDown">Discover <span class="trs-italic">Your</span> Inner Talents</span></span></h1>
-                  <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="#" data-caption-animate="slideInDown" data-wow-delay=".2s">start learning</a></div>
+                  <h1 class="wow-outer"><span class="wow-outer"><span class="wow" data-caption-animate="slideInDown">Descubre <span class="trs-italic">Tus</span> Talentos</span></span></h1>
+                  <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="<%= courses_path %>" data-caption-animate="slideInDown" data-wow-delay=".2s">Ir Cursos</a></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide" data-slide-bg="<%= image_url 'slider-light-slide-3-1920x776.jpg' %>">
+          <div class="swiper-slide" data-slide-bg="<%= image_url 'IMG_HOME_03.jpg' %>">
             <div class="slide-inner">
               <div class="container">
                 <div class="swiper-slide-caption">
-                  <h1 class="wow-outer"><span class="wow-outer"><span class="wow" data-caption-animate="slideInDown">Pick <span class="trs-italic">Your</span> Instrument</span></span></h1>
-                  <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="#" data-caption-animate="slideInDown" data-wow-delay=".2s">start learning</a></div>
+                  <h1 class="wow-outer"><span class="wow-outer"><span class="wow" data-caption-animate="slideInDown">Con <span class="trs-italic">Nuestros</span> Profesores</span></span></h1>
+                  <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="<%= pages_profesores_path %>" data-caption-animate="slideInDown" data-wow-delay=".2s">Ir a Profesores</a></div>
                 </div>
               </div>
             </div>
@@ -42,21 +39,26 @@
         </div>
       </section>
 
+
+
       <!-- A Few Words About Us-->
       <section class="section section-lg">
         <div class="container">
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
             <div class="col-md-10 col-lg-6 col-xl-5">
               <h3 class="wow-outer"><span class="wow slideInDown">Bienvenido a Nuestro Conservatorio!</span></h3>
-              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">Melody Music School offers comprehensive musicianship through active learning for children and adults. Our music educators are highly qualified and share a love of teaching.</span></p>
-              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".1s">Our curriculum offers group experiences, private lessons, ensemble participation, theater, and camps. We believe that learning music can be fun, and we believe in the effectiveness of learning in groups.</span></p>
-              <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="about-us.html">read more</a></div>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">Conservatorio Nacional De Acordeon ofrece una formación musical completa a través del aprendizaje activo para niños y adultos. Nuestros educadores musicales están altamente calificados y comparten el amor por la enseñanza.</span></p>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".1s">Nuestro plan de estudios ofrece experiencias en grupo, lecciones privadas, participación en conjunto, Canto y Danza. Creemos que aprender música puede ser divertido, y creemos en la efectividad de aprender en grupos.</span></p>
             </div>
-            <div class="col-md-10 col-lg-6 wow-outer"><%= image_tag 'large-features-3-570x368.jpg', class:'img-responsive wow slideInLeft' %>
-            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OXGwCjtJxpc"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+
           </div>
         </div>
       </section>
+
+
 
       <!-- Music Classes-->
       <section class="section section-lg bg-gray-100 text-center">
@@ -83,7 +85,7 @@
               <!-- Box Creative-->
               <article class="box-creative wow slideInDown" data-wow-delay=".3s">
                 <div class="novi-icon box-creative-icon linearicons-mic"></div>
-                <h4 class="box-creative-title"><a href="classes.html">Vocal</a></h4>
+                <h4 class="box-creative-title"><a href="classes.html">Canto</a></h4>
                 <p>Melody offers a wide variety of vocal classes for all ages and skills.</p>
               </article>
             </div>
@@ -91,7 +93,7 @@
               <!-- Box Creative-->
               <article class="box-creative wow slideInDown" data-wow-delay=".6s">
                 <div class="novi-icon box-creative-icon linearicons-trumpet"></div>
-                <h4 class="box-creative-title"><a href="classes.html">Trumpet</a></h4>
+                <h4 class="box-creative-title"><a href="classes.html">Acordeon</a></h4>
                 <p>We offer extensive trumpet learning program at our music school.</p>
               </article>
             </div>
@@ -99,7 +101,7 @@
               <!-- Box Creative-->
               <article class="box-creative wow slideInDown" data-wow-delay=".5s">
                 <div class="novi-icon box-creative-icon linearicons-equalizer"></div>
-                <h4 class="box-creative-title"><a href="classes.html">DJ</a></h4>
+                <h4 class="box-creative-title"><a href="classes.html">Violin</a></h4>
                 <p>DJ music class provides in-depth knowledge and training for aspiring DJs.</p>
               </article>
             </div>
@@ -107,7 +109,7 @@
               <!-- Box Creative-->
               <article class="box-creative wow slideInDown" data-wow-delay=".4s">
                 <div class="novi-icon box-creative-icon linearicons-hearing"></div>
-                <h4 class="box-creative-title"><a href="classes.html">Hearing</a></h4>
+                <h4 class="box-creative-title"><a href="classes.html">Iniciacion Musical</a></h4>
                 <p>Hearing curriculum at our School develops students’ aural skills.</p>
               </article>
             </div>
@@ -123,41 +125,44 @@
           <div class="row row-30 offset-top-2">
             <div class="col-sm-6 col-lg-3 wow-outer">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light wow slideInLeft"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path'service-thumbnail-1-270x300.jpg' %>"  alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="classes.html">Niños</a></h5>
+              <article class="thumbnail-light wow slideInLeft"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path'IMG_HOME_05.jpg' %>"  alt="" width="270" height="300"/></a>
+                <h5 class="thumbnail-light-title"><a href="<%= courses_path %>">Niños</a></h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3 wow-outer">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light wow slideInLeft" data-wow-delay=".05s"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path 'service-thumbnail-2-270x300.jpg' %>" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="classes.html">Adolecentes</a></h5>
+              <article class="thumbnail-light wow slideInLeft" data-wow-delay=".05s"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path 'IMG_HOME_06.jpg' %>" alt="" width="270" height="300"/></a>
+                <h5 class="thumbnail-light-title"><a href="<%= courses_path %>">Adolecentes</a></h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3 wow-outer">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light wow slideInLeft" data-wow-delay=".1s"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path 'service-thumbnail-3-270x300.jpg' %>" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="classes.html">Adultos</a></h5>
+              <article class="thumbnail-light wow slideInLeft" data-wow-delay=".1s"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path 'IMG_HOME_07.jpg' %>" alt="" width="270" height="300"/></a>
+                <h5 class="thumbnail-light-title"><a href="<%= courses_path %>">Adultos</a></h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3 wow-outer">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light wow slideInLeft" data-wow-delay=".15s"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path 'service-thumbnail-4-270x300.jpg' %>" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="classes.html">Clases Individuales </a></h5>
+              <article class="thumbnail-light wow slideInLeft" data-wow-delay=".15s"><a class="thumbnail-light-media" href="classes.html"><img class="thumbnail-light-image" src=" <%= image_path 'IMG_HOME_08.jpg' %>" alt="" width="270" height="300"/></a>
+                <h5 class="thumbnail-light-title"><a href="<%= courses_path %>">Clases Individuales </a></h5>
               </article>
             </div>
           </div>
         </div>
       </section>
 
+
+
+
       <!-- CTA Parallax-->
-      <section class="section parallax-container section-1 bg-primary-darker text-center" data-parallax-img="<%= image_path 'parallax-cta.jpg' %>">
+      <section class="section parallax-container section-1 bg-primary-darker text-center" data-parallax-img="<%= image_path 'IMG_HOME_09.jpg' %>">
         <div class="parallax-content">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-sm-10 col-lg-7 col-xl-6">
-                <h3 class="wow-outer"><span class="wow slideInDown">Choose <span class="text-italic font-weight-regular">the Best</span> <br> Time for Lessons</span></h3>
-                <p class="wow-outer offset-top-6"><span class="wow slideInDown" data-wow-delay=".05s">Our students can select any time for their music lessons that fits their timetable, whether it’s a weekday evening or weekend morning.</span></p>
-                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" href="#" data-wow-delay=".1s">learn More</a></div>
+                <h3 class="wow-outer"><span class="wow slideInDown">Elije <span class="text-italic font-weight-regular">El Mejor</span> <br> Momento Para Tu Clase</span></h3>
+                <p class="wow-outer offset-top-6"><span class="wow slideInDown" data-wow-delay=".05s">Ademas de Elejir El Instrumento Que mas Te Apasiona Tambien Lo Puedes Estudiar En El Horario Que Mas Te Acomode .</span></p>
+                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" href="#" data-wow-delay=".1s">Ir a Cursos</a></div>
               </div>
             </div>
           </div>
@@ -167,20 +172,20 @@
       <!-- Testimonials-->
       <section class="section section-lg text-center">
         <div class="container">
-          <h3 class="wow-outer"><span class="wow slideInDown">Testimonials</span></h3>
+          <h3 class="wow-outer"><span class="wow slideInDown">Testimonios</span></h3>
           <!-- Owl Carousel-->
           <div class="owl-carousel wow fadeIn" data-items="1" data-md-items="2" data-lg-items="3" data-dots="true" data-nav="false" data-loop="true" data-margin="30" data-stage-padding="0" data-mouse-drag="false" data-autoplay="false">
             <blockquote class="quote-classic">
               <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src=" <%= image_path 'testimonials-person-3-96x96.jpg' %>" alt="" width="96" height="96"/>
+                <div class="quote-classic-avatar"><img src=" <%= image_path 'IMG_HOME_10.jpg' %>" alt="" width="96" height="96"/>
                 </div>
                 <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Albert Webb</cite>
-                  <p class="quote-classic-caption">Student, Piano Class</p>
+                  <cite class="quote-classic-cite">Juan Hernandez</cite>
+                  <p class="quote-classic-caption">Estudiante, Curso de Acordeon</p>
                 </div>
               </div>
               <div class="quote-classic-text">
-                <p>I began as adult student that never had any musical training. Your teachers spent time to understand my objectives and even gave me one trial lesson. It became a great beginning of my piano class.</p>
+                <p>Comencé como estudiante adulto que nunca tuvo ningún entrenamiento musical. Mi profesor dedico tiempo a comprender mis objetivos e incluso me dieron una lección de prueba. Se convirtió en un gran comienzo de mis clases de Acordeon.</p>
               </div>
             </blockquote>
             <blockquote class="quote-classic">
@@ -211,7 +216,7 @@
             </blockquote>
             <blockquote class="quote-classic">
               <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src=" <%= image_path 'testimonials-person-3-96x96.jpg' %>" alt="" width="96" height="96"/>
+                <div class="quote-classic-avatar"><img src=" <%= image_path 'IMG_HOME_07.jpg' %>" alt="" width="96" height="96"/>
                 </div>
                 <div class="quote-classic-info">
                   <cite class="quote-classic-cite">Albert Webb</cite>
@@ -292,10 +297,10 @@
       </section>
 
       <!-- Counters Parallax-->
-      <section class="section parallax-container section-lg text-center context-dark" data-parallax-img="<%= image_url 'parallax-counter.jpg' %>">
+      <section class="section parallax-container section-lg text-center context-dark" data-parallax-img="<%= image_url 'IMG_HOME_11.jpg' %>">
         <div class="parallax-content">
           <div class="container">
-            <h3>Some Facts About Our School</h3>
+            <h3>Algunos Datos Sobre Nuestro Conservatorio</h3>
             <p><span class="text-width-1">We have been helping people sharpen their music skills since our foundation. Below are just some facts and numbers from our history that will tell you more about us.</span></p>
             <div class="row row-50 offset-top-7">
               <div class="col-6 col-md-3">
@@ -303,9 +308,9 @@
                 <article class="counter-minimal">
                   <div class="novi-icon counter-minimal-icon linearicons-trophy2"></div>
                   <div class="counter-minimal-main">
-                    <div class="counter">12</div>
+                    <div class="counter">2</div>
                   </div>
-                  <h5 class="counter-minimal-title">International Awards</h5>
+                  <h5 class="counter-minimal-title">Campeones Nacionales</h5>
                 </article>
               </div>
               <div class="col-6 col-md-3">
@@ -313,9 +318,9 @@
                 <article class="counter-minimal">
                   <div class="novi-icon counter-minimal-icon linearicons-music-note2"></div>
                   <div class="counter-minimal-main">
-                    <div class="counter">238</div>
+                    <div class="counter">200</div>
                   </div>
-                  <h5 class="counter-minimal-title">Satisfied Students</h5>
+                  <h5 class="counter-minimal-title">Estudiantes Satisfechos</h5>
                 </article>
               </div>
               <div class="col-6 col-md-3">
@@ -323,9 +328,9 @@
                 <article class="counter-minimal">
                   <div class="novi-icon counter-minimal-icon linearicons-star"></div>
                   <div class="counter-minimal-main">
-                    <div class="counter">19</div>
+                    <div class="counter">+5</div>
                   </div>
-                  <h5 class="counter-minimal-title">Years of Experience</h5>
+                  <h5 class="counter-minimal-title">Años De Experincia</h5>
                 </article>
               </div>
               <div class="col-6 col-md-3">
@@ -333,9 +338,9 @@
                 <article class="counter-minimal">
                   <div class="novi-icon counter-minimal-icon linearicons-users2"></div>
                   <div class="counter-minimal-main">
-                    <div class="counter">54</div>
+                    <div class="counter">+7</div>
                   </div>
-                  <h5 class="counter-minimal-title">Qualified Teachers</h5>
+                  <h5 class="counter-minimal-title">Profesores Calificados</h5>
                 </article>
               </div>
             </div>
@@ -346,7 +351,8 @@
       <!-- 4 Our Teachers-->
       <section class="section section-lg text-center">
         <div class="container">
-          <h3>Our Teachers</h3>
+          <h3>Nuestros Profesores</h3>
+
           <div class="row row-50">
             <div class="col-sm-6 col-lg-3 wow-outer">
               <!-- Profile Classic-->
@@ -406,51 +412,15 @@
           <div class="row justify-content-center">
             <div class="col-sm-10 col-md-12">
               <div class="box-cta-thin">
-                <h4 class="wow-outer"><span class="wow slideInRight">Start Learning <span class="text-italic font-weight-regular">Your Favorite Instrument</span> Right Now!</span></h4>
-                <div class="wow-outer button-outer"><a class="button button-primary button-winona wow slideInLeft" href="pricing.html">Get started</a></div>
+                <h4 class="wow-outer"><span class="wow slideInRight">¡Comienza a aprender <span class="text-italic font-weight-regular">Tu Instrumento Favorito</span> Ahora Mismo!</span></h4>
+                <div class="wow-outer button-outer"><a class="button button-primary button-winona wow slideInLeft" href="pricing.html">Matriculate</a></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Latest Blog Posts-->
-      <section class="section section-lg text-center">
-        <div class="container">
-          <h3 class="wow-outer text-center"><span class="wow slideInDown">Upcoming Events</span></h3>
-          <div class="row row-50">
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="single-blog-post.html"><img src=" <%= image_path 'grid-blog-1-571x353.jpg' %>" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a href="single-blog-post.html">String Instruments Masterclass</a></h4>
-                <ul class="post-modern-meta">
-                  <li>by Theresa Barnes</li>
-                  <li>
-                    <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
-                  </li>
-                  <li><a class="button-winona" href="#">Events</a></li>
-                </ul>
-                <p>This Friday, our teachers and students will organize a special masterclass open to everyone who is interested in string instruments. You can learn more about this event by contacting...</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="single-blog-post.html"><img src=" <%= image_path 'grid-blog-2-571x353.jpg' %>" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a href="single-blog-post.html">Melody Music School Live DJ Set</a></h4>
-                <ul class="post-modern-meta">
-                  <li>by Theresa Barnes</li>
-                  <li>
-                    <time datetime="2018">Apr 21, 2018 at 12:05 pm</time>
-                  </li>
-                  <li><a class="button-winona" href="#">Events</a></li>
-                </ul>
-                <p>Come visit our school next Sunday to enjoy a great track selections and DJ sets by our students and their teacher John Thompson. The event will also include live performances by...</p>
-              </article>
-            </div>
-          </div>
-          <div class="wow-outer button-outer"><a class="button button-primary-outline button-winona wow slideInUp" href="grid-blog.html">View All Events</a></div>
-        </div>
-      </section>
+
 
       <!-- Contacts-->
       <section class="section bg-gray-100">
@@ -459,19 +429,19 @@
             <div class="row">
               <div class="col-lg-9 cell-inner">
                 <div class="section-lg">
-                  <h3 class="wow-outer"><span class="wow slideInDown">Contact Us</span></h3>
+                  <h3 class="wow-outer"><span class="wow slideInDown">Contactanos</span></h3>
                   <!-- RD Mailform-->
-                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd- ">
                     <div class="row row-10">
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-first-name">First Name</label>
+                          <label class="form-label-outside" for="contact-first-name">Nombre</label>
                           <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required">
                         </div>
                       </div>
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-last-name">Last Name</label>
+                          <label class="form-label-outside" for="contact-last-name">Apellido</label>
                           <input class="form-input" id="contact-last-name" type="text" name="name" data-constraints="@Required">
                         </div>
                       </div>
@@ -483,37 +453,29 @@
                       </div>
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-phone">Phone</label>
+                          <label class="form-label-outside" for="contact-phone">Telefono</label>
                           <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@PhoneNumber">
                         </div>
                       </div>
                       <div class="col-12 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
-                          <label class="form-label-outside" for="contact-message">Your Message</label>
+                          <label class="form-label-outside" for="contact-message">Tu Mensaje</label>
                           <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
                         </div>
                       </div>
                     </div>
                     <div class="group group-middle">
                       <div class="wow-outer">
-                        <button class="button button-primary button-winona wow slideInRight" type="submit">Send Message</button>
+                        <button class="button button-primary button-winona wow slideInRight" type="submit">Enviar</button>
                       </div>
-                      <p>or use</p>
-                      <div class="wow-outer"><a class="button button-primary-outline button-icon button-icon-left button-winona wow slideInLeft" href="#"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</a></div>
-                    </div>
+                      </div>
                   </form>
                 </div>
               </div>
             </div>
           </div>
-          <div class="cell-xl-5 height-fill wow fadeIn">
-            <div class="google-map-container" data-zoom="14" data-marker="images/gmap_marker.png" data-marker-active="images/gmap_marker_active.png" data-center="6036 Richmond hwy., Alexandria, VA, 2230" data-icon="images/gmap_marker.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e9e9e9&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:29},{&quot;weight&quot;:0.2}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:18}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:21}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dedede&quot;},{&quot;lightness&quot;:21}]},{&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:36},{&quot;color&quot;:&quot;#333333&quot;},{&quot;lightness&quot;:40}]},{&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;},{&quot;lightness&quot;:19}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:17},{&quot;weight&quot;:1.2}]}]">
-              <div class="google-map"></div>
-              <ul class="google-map-markers">
-                <li data-location="6036 Richmond hwy., Alexandria, VA, 2230" data-description="6036 Richmond hwy., Alexandria, VA, 2230"></li>
-              </ul>
-            </div>
-          </div>
+
+            <%= render "shared/googlemaps" %>
         </div>
       </section>
 
