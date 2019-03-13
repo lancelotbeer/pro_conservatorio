@@ -34,7 +34,12 @@
               </ul>
                <p><%= @post.content %></p>
 
-               <%= link_to 'Edit', edit_post_path(@post) %>
+
+               <% if current_user %>
+                 <% if current_user.admin? %>
+                  <%= link_to 'Edit', edit_post_path(@post) %>
+                 <% end %>
+               <% end %>
               <ul class="post-creative-footer">
                 <li>Share this post!</li>
                 <li>
@@ -45,7 +50,7 @@
             <div class="section-sm">
               <h3>Comentarios</h3>
               <div class="comment-classic-group">
-                
+
                 <% @post.comments.each do |comment| %>
 
                 <!-- Comment Classic-->
@@ -53,14 +58,19 @@
                   <figure class="comment-classic-figure"><img class="comment-classic-image" src="<%= image_path 'comment-3-48x48.jpg' %>" alt="" width="48" height="48"/>
                   </figure>
                   <div class="comment-classic-main">
-                    <p class="comment-classic-name"><%= comment.user.name %>nombre</p>
+                    <p class="comment-classic-name">Nombre: <%= comment.user.name %> </p>
                     <div class="comment-classic-text">
                       <p><%= comment.content %></p>
                     </div>
                     <ul class="comment-classic-meta">
                       <li>
                         <time datetime="2018"><%= comment.created_at %></time>
+
+                        <% if current_user %>
+                          <% if (current_user.admin? or current_user == comment.user) %>
                         <td><%= link_to 'Destroy', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                          <% end %>
+                        <% end %>
                       </li>
                       <li><a class="comment-classic-reply" href="#" aria-label="reply"></a></li>
                     </ul>

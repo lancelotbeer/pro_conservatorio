@@ -27,11 +27,10 @@
               <% if order.course.present? %>
                 <article class="pricing-minimal wow slideInRight">
                   <h5 class="pricing-minimal-title"><a href=" "><%= order.course.name if order.course.present? %></a></h5>
-                  <p class="pricing-minimal-price"><span class="pricing-minimal-price-currency">$</span>30.000</p>
+                  <p class="pricing-minimal-price"><span class="pricing-minimal-price-currency">$</span></p>
                   <div class="pricing-minimal-divider"></div>
                   <p><%= order.course.description if order.course.present? %></p>
                   <td><%= link_to 'Borrar', course_order_path(order.course, order), method: :delete, data: { confirm: 'Are you sure?' }, class:"button button-primary button-winona"%></td>
-                  <td><%= link_to 'Pagar', course_order_path(order.course, order), class:"button button-primary button-winona" %></td>
                 </article>
               <% end %>
 

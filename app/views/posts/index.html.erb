@@ -30,9 +30,9 @@
         <div class="col-md-6 scaleFadeInWrap">
           <!-- Post Modern-->
           <div class="wow scaleFadeIn">
-            <article class="post-modern"><a class="post-modern-media" href="single-blog-post.html"><img src="<%= post.image.url %>" alt="" width="571" height="353"/></a>
+            <article class="post-modern"><a class="post-modern-media" href="<%= post_path(post) %>"><img src="<%= post.image.url %>" alt="" width="571" height="353"/></a>
 
-              <h4 class="post-modern-title"><a href="single-blog-post.html"><td><%= post.title %></td></a></h4>
+              <h4 class="post-modern-title"><a href="<%= post_path(post) %>"><td><%= post.title %></td></a></h4>
               <ul class="post-modern-meta">
                 <li><%= post.user.try(:name) %></li>
                 <li>
@@ -41,17 +41,26 @@
                 <li><a class="button-winona" href="#"><%= link_to 'Entrar al Post', post %></a></li>
               </ul>
               <p><%= post.content %></p>
+
+              <% if current_user %>
+                <% if current_user.admin? %>
               <tr>
                 <td><%= link_to 'Edit', edit_post_path(post) %></td>
                 <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
+                <% end %>
+              <% end %>
             </article>
           </div>
         </div>
           <% end %>
 
-      <%= link_to 'New Post', new_post_path %>
 
+    <% if current_user %>
+      <% if current_user.admin? %>
+      <%= link_to 'New Post', new_post_path %>
+      <% end %>
+    <% end %>
 
     </div>
   </section>

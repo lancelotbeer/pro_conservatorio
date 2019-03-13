@@ -57,7 +57,11 @@
             <% @courses.each do |course| %>
             <% @course = course %>
               <%= render 'shared/course' %>
-              <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% if current_user %>
+                <% if current_user.admin? %>
+                  <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+              <% end %>
             <% end %>
           </div>
         </div>
